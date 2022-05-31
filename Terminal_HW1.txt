@@ -1,0 +1,155 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+$ pwd
+/d/KURS QA
+
+2) Создать папку
+$ mkdir hw_1
+
+3) Зайти в папку
+$ cd hw_1
+
+4) Создать 3 папки
+$ mkdir folder1 folder2 folder3
+
+5) Зайти в любоую папку
+$ cd folder1
+
+6) Создать 5 файлов (3 txt, 2 json)
+$ touch text_1.txt text_2.txt text_3.txt j_1.json j_2.json
+
+7) Создать 3 папки
+$ mkdir qa_1 qa_2 qa_3
+
+8. Вывести список содержимого папки
+$ ls -la
+total 4
+drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 ./
+drwxr-xr-x 1 Алеся 197121 0 May 22 16:07 ../
+-rw-r--r-- 1 Алеся 197121 0 May 22 16:30 aa.json
+-rw-r--r-- 1 Алеся 197121 0 May 22 16:29 bb.txt
+-rw-r--r-- 1 Алеся 197121 0 May 22 16:29 cc.txt
+-rw-r--r-- 1 Алеся 197121 0 May 22 16:29 dd.txt
+-rw-r--r-- 1 Алеся 197121 0 May 22 16:30 ff.json
+drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_1/
+drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_2/
+drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_3/
+
+9) + Открыть любой txt файл
+$ cat bb.txt
+
+10) + написать туда что-нибудь, любой текст.
+$ cat >> bb.txt
+eng
+bel
+rus
+
+pip
+grt
+sol
+
+11) + сохранить и выйти.
+сочетание клавиш Ctrl+c
+
+12) Выйти из папки на уровень выше
+$ cd ../
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+$ mv folder1/cc.txt folder2/cc.txt ; mv folder1/ff.json folder2/ff.json
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+$ cp folder1/aa.json folder3/aa.json ; cp folder1/dd.txt folder3/dd.txt
+
+15) Найти файл по имени
+$ find . -name dd.txt
+./folder1/dd.txt
+./folder3/dd.txt
+у меня их два в разных папках
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+$ tail -f bb.txt
+eng
+bel
+rus
+sdf
+jki
+pol
+jut
+bgt
+mju
+pip
+grt
+sol
+
+17) вывести несколько первых строк из текстового файла
+$ head -3 bb.txt
+eng
+bel
+rus
+
+18) вывести несколько последних строк из текстового файла
+$ tail -3 bb.txt
+pip
+grt
+sol
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+$ less bb.txt
+
+20) вывести дату и время
+$ date
+Mon May 23 08:59:48 RTZ 2022
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+$ curl "http://162.55.220.72:5005/terminal-hw-request"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   2500      0 --:--:-- --:--:-- --:--:--  2526{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+
+$ curl "http://162.55.220.72:5005/get_method?name=Alesia&age=33"
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    24  100    24    0     0    400      0 --:--:-- --:--:-- --:--:--   406[
+  "Alesia",
+  "33"
+]
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+$ nano script1.sh
+
+$ bash script1.sh
+script1.sh: line 2: cd: skript: No such file or directory
+mkdir: cannot create directory ‘a_1’: File exists
+mkdir: cannot create directory ‘a_2’: File exists
+mkdir: cannot create directory ‘a_3’: File exists
+mkdir: cannot create directory ‘papka1’: File exists
+mkdir: cannot create directory ‘papka2’: File exists
+mkdir: cannot create directory ‘papka3’: File exists
+total 4
+drwxr-xr-x 1 Алеся 197121 0 May 23 14:12 .
+drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 ..
+-rw-r--r-- 1 Алеся 197121 0 May 23 14:07 doc.json
+-rw-r--r-- 1 Алеся 197121 0 May 24 10:15 doc1.json
+-rw-r--r-- 1 Алеся 197121 0 May 24 10:15 doc2.json
+drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka1
+drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka2
+drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka3
+-rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t1.txt
+-rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t2.txt
+-rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t3.txt
