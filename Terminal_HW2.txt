@@ -220,14 +220,14 @@ $ grep -rlv second . | xargs -I . realpath . ; find -empty | xargs -I . realpath
 /d/KURS QA/Lesson_2/dir_1/tf_1.txt
 
  33. Вывести в терминал 4 последних строки любого текстового файла
- $ tail -4 inner_dir_1/tf_5.txt
+ $ tail -4 inner_dir_1/tF_5.txt
 ltd
 mpc
 eu
 contact
 
  34. Вывести в терминал 4 первые строки любого текстового файла.
- $ head -4 inner_dir_1/tf_5.txt
+ $ head -4 inner_dir_1/tF_5.txt
 office
 space
 marker
