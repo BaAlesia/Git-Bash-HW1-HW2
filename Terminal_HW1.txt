@@ -1,5 +1,5 @@
 HW_1. The first part
-Linux terminal (GitBash) commands
+GitBash commands (Linux terminal):
 
 1) Посмотреть где я
 $ pwd
@@ -23,19 +23,8 @@ $ touch text_1.txt text_2.txt text_3.txt j_1.json j_2.json
 7) Создать 3 папки
 $ mkdir qa_1 qa_2 qa_3
 
-8. Вывести список содержимого папки
+8) Вывести список содержимого папки
 $ ls -la
-total 4
-drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 ./
-drwxr-xr-x 1 Алеся 197121 0 May 22 16:07 ../
--rw-r--r-- 1 Алеся 197121 0 May 22 16:30 aa.json
--rw-r--r-- 1 Алеся 197121 0 May 22 16:29 bb.txt
--rw-r--r-- 1 Алеся 197121 0 May 22 16:29 cc.txt
--rw-r--r-- 1 Алеся 197121 0 May 22 16:29 dd.txt
--rw-r--r-- 1 Алеся 197121 0 May 22 16:30 ff.json
-drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_1/
-drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_2/
-drwxr-xr-x 1 Алеся 197121 0 May 22 17:23 qa_3/
 
 9) + Открыть любой txt файл
 $ cat bb.txt
@@ -66,9 +55,9 @@ $ cp folder1/aa.json folder3/aa.json ; cp folder1/dd.txt folder3/dd.txt
 $ find . -name dd.txt
 ./folder1/dd.txt
 ./folder3/dd.txt
-у меня их два в разных папках
+два в разных папках
 
-16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+16) просмотреть содержимое в реальном времени.
 $ tail -f bb.txt
 eng
 bel
