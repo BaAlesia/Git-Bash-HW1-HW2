@@ -3,7 +3,6 @@ GitBash commands (Linux terminal):
 
 1) Посмотреть где я
 $ pwd
-/d/KURS QA
 
 2) Создать папку
 $ mkdir hw_1
