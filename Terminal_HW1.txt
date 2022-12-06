@@ -120,24 +120,17 @@ $ curl "http://162.55.220.72:5005/get_method?name=Alesia&age=33"
 
 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
 $ nano script1.sh
+#!/bin/bash
+mkdir skript
+cd skript
+mkdir a_1 a_2 a_3
+cd a_1
+touch t1.txt t2.txt t3.txt doc1.json doc2.json
+mkdir papka1 papka2 papka3
+ls
+cd ../
+mv a_1/t1.txt a_2/t1.txt
+mv a_1/t2.txt a_2/t2.txt
 
 $ bash script1.sh
-script1.sh: line 2: cd: skript: No such file or directory
-mkdir: cannot create directory ‘a_1’: File exists
-mkdir: cannot create directory ‘a_2’: File exists
-mkdir: cannot create directory ‘a_3’: File exists
-mkdir: cannot create directory ‘papka1’: File exists
-mkdir: cannot create directory ‘papka2’: File exists
-mkdir: cannot create directory ‘papka3’: File exists
-total 4
-drwxr-xr-x 1 Алеся 197121 0 May 23 14:12 .
-drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 ..
--rw-r--r-- 1 Алеся 197121 0 May 23 14:07 doc.json
--rw-r--r-- 1 Алеся 197121 0 May 24 10:15 doc1.json
--rw-r--r-- 1 Алеся 197121 0 May 24 10:15 doc2.json
-drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka1
-drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka2
-drwxr-xr-x 1 Алеся 197121 0 May 23 14:06 papka3
--rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t1.txt
--rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t2.txt
--rw-r--r-- 1 Алеся 197121 0 May 24 10:15 t3.txt
+
